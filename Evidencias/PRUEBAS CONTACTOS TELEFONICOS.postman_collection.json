@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "69e57061-2c4e-4284-bbab-f5c62f3fb599",
+    "name": "PRUEBAS CONTACTOS TELEFONICOS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28222159",
+    "_collection_link": "https://go.postman.co/collection/28222159-69e57061-2c4e-4284-bbab-f5c62f3fb599?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "PruebasContactos",
+      "item": [
+        {
+          "name": "guardar contacto",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"alberto\",\r\n    \"apellido\" : \"calderón\",\r\n    \"email\": \"albertocalderon@email.com\",\r\n    \"telefonos\": [\r\n        {\r\n        \"tipo\": \"CELULAR\",\r\n        \"numero\" : \"7443413804\"\r\n    },\r\n            {\r\n        \"tipo\": \"CASA\",\r\n        \"numero\" : \"7443411122\"\r\n    } \r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/contactos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "contactos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "listar",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/contactos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "contactos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "eliminado lógico",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/contactos/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "contactos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "buscar por ID",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/contactos/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "contactos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "actualizar por id",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"luis\",\r\n    \"apellido\" : \"pacheco\",\r\n    \"email\": \"actualizado@email.com\",\r\n    \"telefonos\": [\r\n        {\r\n        \"tipo\": \"CASA\",\r\n        \"numero\" : \"7443413804\"\r\n    },\r\n            {\r\n        \"tipo\": \"TRABAJO\",\r\n        \"numero\" : \"7443411122\"\r\n    } \r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/contactos/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "contactos",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
