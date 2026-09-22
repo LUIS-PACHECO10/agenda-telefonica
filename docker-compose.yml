@@ -1,0 +1,13 @@
+services:
+  agenda-api:
+    build: .
+    container_name: agenda-api
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      SERVER_PORT: 8080
+      DB_URL: "jdbc:h2:mem:accountsdb"
+      DB_USERNAME: "sa"
+      DB_PASSWORD: ""
